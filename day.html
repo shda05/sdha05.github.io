@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>Day</title>
+        <link rel="stylesheet" href="daystyle.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <section id="page">
+            <a href="Web.html">HOME</a>
+            <h1>DAY [ 일/날/하루 ]</h1>
+            <TABLE class="center" border="1">
+                <TR>
+                <TH>DAYS</TH>
+                <TH>HANGEUL (한글)</TH>
+                <TH>ROMANIZATION</TH>
+                </TR>
+                <TR>
+                    <TD>MONDAY</TD>
+                    <TD>월요일</TD>
+                    <TD>weolyoil</TD>
+                </TR>
+                <TR>
+                    <TD>TUESDAY</TD>
+                    <TD>화요일</TD>
+                    <TD>hwayoil</TD>
+                </TR>
+                <TR>
+                    <TD>WEDNESDAY</TD>
+                    <TD>수요일</TD>
+                    <TD>suyoil</TD>
+                </TR>
+                <TR>
+                    <TD>THURSDAY</TD>
+                    <TD>목요일</TD>
+                    <TD>mogyoil</TD>
+                </TR>
+                <TR>
+                    <TD>FRIDAY</TD>
+                    <TD>금요일</TD>
+                    <TD>geumyoil</TD>
+                </TR>
+                <TR>
+                    <TD>SATURDAY</TD>
+                    <TD>토요일</TD>
+                    <TD>toyoil</TD>
+                </TR>
+                <TR>
+                    <TD>SUNDAY</TD>
+                    <TD>일요일</TD>
+                    <TD>ilyoil</TD>
+                </TR>
+            
+            </TABLE>
+            <h2>MONTH [ 달/개월 ]</h2>
+            <TABLE class="center" border="1">
+                <TR>
+                    <TH>MONTH</TH>
+                    <TH>HANGEUL (한글)</TH>
+                    <TH>ROMANIZATION</TH>
+                </TR>
+                <TR>
+                    <TD>JANUARY</TD>
+                    <TD>일월</TD>
+                    <TD>ilwol</TD>
+                </TR>
+                <TR>
+                    <TD>FEBRUARY</TD>
+                    <TD>이월</TD>
+                    <TD>iwol</TD>
+                </TR>
+                <TR>
+                    <TD>MARCH</TD>
+                    <TD>삼월</TD>
+                    <TD>samwol</TD>
+                </TR>
+                <TR>
+                    <TD>APRIL</TD>
+                    <TD>사월</TD>
+                    <TD>sawol</TD>
+                </TR>
+                <TR>
+                    <TD>MAY</TD>
+                    <TD>오월</TD>
+                    <TD>owol</TD>
+                </TR>
+                <TR>
+                    <TD>JUNE</TD>
+                    <TD>유월</TD>
+                    <TD>yuwol</TD>
+                </TR>
+                <TR>
+                    <TD>JULY</TD>
+                    <TD>칠월</TD>
+                    <TD>chilwol</TD>
+                </TR>
+                <TR>
+                    <TD>AUGUST</TD>
+                    <TD>팔월</TD>
+                    <TD>palwol</TD>
+                </TR>
+                <TR>
+                    <TD>SEPTEMBER</TD>
+                    <TD>구월</TD>
+                    <TD>guwol</TD>
+                </TR>
+                <TR>
+                    <TD>OCTOBER</TD>
+                    <TD>시월</TD>
+                    <TD>siwol</TD>
+                </TR>
+                <TR>
+                    <TD>NOVEMBER</TD>
+                    <TD>십일월</TD>
+                    <TD>sibilwol</TD>
+                </TR>
+                <TR>
+                    <TD>DECEMBER</TD>
+                    <TD>십이월</TD>
+                    <TD>sibiwol</TD>
+                </TR>
+            </TABLE>
+            <h3>DATE</h3>
+            <p> Date format in Korea: <br>
+                YYYY년MM월DD일 <br>
+
+                년=Year
+                월=Month
+                일=Day
+
+                EXAMPLE:-
+                <li>이천일년 (icheonilnyeon) = Year 2001</li><br>
+                  이천 (2,000) + 일 (1) = 이천일년 (2001) <br><br>
+                <li>천구백구십구 (cheongubaeggusibgu) = Year 1999</li><br>
+                  천 (1,000) + 구백 (900) + 구십 (90) + 구 (9) = 천구백구십구 (1999)
+             </p>
+             <h2>EXERCISE</h2>
+             <form name="day" action="">
+                 <p>i. 팔월 <br>
+                      ii. 십이월 <br>
+                     iii. 월요일 <br>
+                      iv. 구월 <br>
+                   1. Which is/are the month?
+                </p>
+                <p id="answer" name="answer"></p>
+                <input type="radio" name="day" onclick="displayStatus(this.value)" value="WRONG X">i,ii,iii
+                <input type="radio" name="day" onclick="displayStatus(this.value)" value="WRONG X">i,iii,iv
+                <input type="radio" name="day" onclick="displayStatus(this.value)"value="CORRECT /">i,ii,iv
+                <input type="radio" name="day" onclick="displayStatus(this.value)" value="WRONG X">All of the above
+                <p>2. Which are the correct date format in Korea?</p>
+                <input type="checkbox" id="days" name="days" value="WRONG X">12월1995년05일
+                <input type="checkbox" id="days" name="days" value="CORRECT /">2010년04월01일
+                <input type="checkbox" id="days" name="days" value="CORRECT /">1995년12월05일
+                <input type="checkbox" id="days" name="days" value="WRONG X">04월2010년01일
+                <input type="button" name="submit" onclick="myFunction()" value="SUBMIT">
+                <input type="text" id="date">
+                <p>3. What is 'December' in hangeul?</p>
+                <input type="text" name="day">
+                <input type="submit" name="submit" value="SUBMIT">
+                <p>4. What is 목요일(mogyoil)?</p>
+                <input type="text" name="day">
+                <input type="submit" name="submit" value="SUBMIT">
+             </form>
+        </section>
+        <script>
+             function displayStatus(){
+                var ele=document.getElementsByName('day');
+                for(i=0;i<ele.length;i++){
+                        if(ele[i].checked)
+                        document.getElementById("answer").innerHTML=ele[i].value;                        
+                    }
+            }
+            function myFunction() {
+                var days = document.forms[0];
+                var text = "";
+                var i;
+                for (i = 0; i < days.length; i++) {
+                    if (days[i].checked=) {
+                    text = text + coffee[i].value + " ";
+                    }
+                }
+            document.getElementById("date").value = text;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>Colors</title>
+        <link rel="stylesheet" href="colorstyle.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <section id="page">
+            <a href="Web.html">HOME</a>
+            <h1>COLORS [ 색깔 ]</h1>
+            <p>PLEASE SELECT ANY COLOR BELOW :</p>
+            <TABLE class="center" border="">
+                <TD>
+                    <form name="color" action="">
+                        <input type="radio" name="colors" onclick="changeBackground('black')" value="black">black &#160  |  검정색(geomjeongsaek)<br>
+                        <input type="radio" name="colors" onclick="changeBackground('blue')" value="blue"> blue &#160 &#160|  파란색(paransaek)<br>
+                        <input type="radio" name="colors" onclick="changeBackground('brown')" value="brown">brown &#160| 갈색(galsaek)<br>
+                        <input type="radio" name="colors" onclick="changeBackground('gray')" value="gray">gray &#160 &#160 | 회색(hoesaek)<br>
+                        <input type="radio" name="colors" onclick="changeBackground('green')" value="green">green &#160 | 초록색(choroksaek)<br>
+                        <input type="radio" name="colors" onclick="changeBackground('orange')" value="orange">orange | 주황색(juhwangsaek)<br>
+                        <input type="radio" name="colors" onclick="changeBackground('pink')" value="pink">pink &#160 &#160 | 분홍색(bunhongsaek)<br>
+                        <input type="radio" name="colors" onclick="changeBackground('purple')" value="purple">purple &#160| 보라색(borasaek)<br>
+                        <input type="radio" name="colors" onclick="changeBackground('red')" value="red">red &#160 &#160 &#160 | 빨간색(bbalgansaek)<br>
+                        <input type="radio" name="colors" onclick="changeBackground('white')" value="white">white &#160&#160| 하얀색(hayansaek)/흰색(heuinsaek)<br>
+                        <input type="radio" name="colors" onclick="changeBackground('yellow')" value="yellow">yellow | 노란색(noransaek)<br>
+                    </form>
+                </TD>
+            </TABLE>
+            <h2>EXERCISE</h2>
+            <form name="color" action="">
+            <p>1. What is 초록색(choroksaek)?</p>
+            <input type="radio" name="colors" onclick="displayStatus(this.value)" value="WRONG X">purple
+            <input type="radio" name="colors" onclick="displayStatus(this.value)" value="CORRECT /">green
+            <input type="radio" name="colors" onclick="displayStatus(this.value)" value="WRONG X">blue 
+            <p id="answer" name="answer"></p><br><br>
+            <img src="orange.png" height="100">
+            <p>2. Please type the color above in hangeul.</p>
+            <input type="text" name="color">
+            <input type="submit" name="submit" value="SUBMIT">
+            <p>3. 검정색 | 분홍색 | 하얀색 | 회색</p>
+            <p> From the above, which one is white?</p>
+            <input type="text" name="color">
+            <input type="submit" name="submit" value="SUBMIT">
+           </form> 
+           <script>
+                function changeBackground(color){
+                    document.bgColor = color;
+                }
+                function displayStatus(){
+                    var ele=document.getElementsByName('colors');
+                    for(i=0;i<ele.length;i++){
+                        if(ele[i].checked)
+                        document.getElementById("answer").innerHTML=ele[i].value;                        
+                    }
+            }
+            </script>
+        </section>
+    </body>
+</html>
